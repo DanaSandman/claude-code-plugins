@@ -1,0 +1,123 @@
+{
+  "generatedAt": "2026-02-25T12:00:00.000Z",
+  "projectRoot": "/Users/example/my-nextjs-app",
+  "framework": "nextjs",
+  "summary": {
+    "totalIssues": 8,
+    "bySeverity": {
+      "critical": 1,
+      "high": 3,
+      "medium": 3,
+      "low": 1
+    },
+    "byCategory": {
+      "rendering": 2,
+      "title": 1,
+      "meta-description": 1,
+      "headings": 1,
+      "semantic-html": 1,
+      "url-structure": 1,
+      "images": 1,
+      "internal-links": 0
+    },
+    "autoFixable": 4
+  },
+  "issues": [
+    {
+      "id": "SEO-001",
+      "severity": "critical",
+      "framework": "nextjs",
+      "category": "rendering",
+      "file": "app/products/page.tsx",
+      "line": 1,
+      "problem": "Page/layout uses 'use client' but contains SEO-critical content",
+      "seoImpact": "Search engines may not index client-rendered SEO content. Server Components are preferred for SEO-critical pages.",
+      "recommendedFix": "Move SEO-critical content to a Server Component. Extract interactive parts into separate client components.",
+      "autoFixPossible": false
+    },
+    {
+      "id": "SEO-002",
+      "severity": "high",
+      "framework": "nextjs",
+      "category": "rendering",
+      "file": "app/blog/[slug]/page.tsx",
+      "line": 1,
+      "problem": "Dynamic route page missing generateStaticParams",
+      "seoImpact": "Without generateStaticParams, dynamic pages use SSR instead of SSG.",
+      "recommendedFix": "Add generateStaticParams() to pre-generate static pages for known paths.",
+      "autoFixPossible": false
+    },
+    {
+      "id": "SEO-003",
+      "severity": "high",
+      "framework": "nextjs",
+      "category": "title",
+      "file": "app/about/page.tsx",
+      "line": 1,
+      "problem": "Page missing metadata title",
+      "seoImpact": "Pages without unique titles rank poorly and have reduced click-through rates.",
+      "recommendedFix": "Add metadata export: export const metadata = { title: 'About Us' }",
+      "autoFixPossible": true
+    },
+    {
+      "id": "SEO-004",
+      "severity": "high",
+      "framework": "nextjs",
+      "category": "meta-description",
+      "file": "app/about/page.tsx",
+      "line": 1,
+      "problem": "Page missing meta description in metadata export",
+      "seoImpact": "Pages without meta descriptions show auto-generated snippets in search results.",
+      "recommendedFix": "Add description to metadata: export const metadata = { description: 'Learn about our company' }",
+      "autoFixPossible": true
+    },
+    {
+      "id": "SEO-005",
+      "severity": "medium",
+      "framework": "nextjs",
+      "category": "headings",
+      "file": "app/products/page.tsx",
+      "line": 25,
+      "problem": "Skipped heading level: H1 → H3 (expected H2)",
+      "seoImpact": "Skipped heading levels break the document outline and reduce SEO structure.",
+      "recommendedFix": "Change <h3> to <h2> or add intermediate heading levels.",
+      "autoFixPossible": true
+    },
+    {
+      "id": "SEO-006",
+      "severity": "medium",
+      "framework": "nextjs",
+      "category": "semantic-html",
+      "file": "app/layout.tsx",
+      "line": 1,
+      "problem": "Missing <main> landmark element",
+      "seoImpact": "The <main> tag helps search engines identify the primary content area.",
+      "recommendedFix": "Wrap the primary content area in a <main> tag.",
+      "autoFixPossible": true
+    },
+    {
+      "id": "SEO-007",
+      "severity": "medium",
+      "framework": "nextjs",
+      "category": "url-structure",
+      "file": "app/Products/page.tsx",
+      "line": 1,
+      "problem": "Route segment \"Products\" contains uppercase characters",
+      "seoImpact": "Poorly formatted URLs reduce readability and may affect search rankings.",
+      "recommendedFix": "Use lowercase-only URL segments",
+      "autoFixPossible": false
+    },
+    {
+      "id": "SEO-008",
+      "severity": "low",
+      "framework": "nextjs",
+      "category": "images",
+      "file": "app/components/Hero.tsx",
+      "line": 12,
+      "problem": "<img> tag missing explicit width/height attributes",
+      "seoImpact": "Missing dimensions cause Cumulative Layout Shift (CLS), a Core Web Vital.",
+      "recommendedFix": "Add width and height attributes to prevent layout shift.",
+      "autoFixPossible": false
+    }
+  ]
+}
