@@ -22,6 +22,24 @@ Audits and fixes technical SEO issues across all frontend frameworks — Next.js
 
 ---
 
+### shadcn-toolkit
+
+Generates UI components with shadcn/ui and Tailwind CSS for Next.js/React projects. Auto-detects your project setup, creates accessible, responsive, type-safe components, and manages theming (dark mode, color palettes, design tokens).
+
+**Commands:**
+
+```
+/add-shadcn-component dialog    # Install a shadcn/ui component
+/create-custom-component        # Generate a custom React component
+/create-form                    # Create a form with validation
+```
+
+**Skills:** Auto-triggers on "create a component", "build a UI", "set up dark mode", "change the theme", etc.
+
+**Hooks:** Checks every edited `.tsx`/`.jsx` for hardcoded colors, missing button types, accessibility issues, and missing `"use client"`.
+
+---
+
 *More plugins coming soon.*
 
 ## Getting Started
@@ -30,6 +48,7 @@ Load a plugin:
 
 ```bash
 claude --plugin-dir ./plugins/seo-plugin
+claude --plugin-dir ./plugins/shadcn-toolkit
 ```
 
 ## Requirements

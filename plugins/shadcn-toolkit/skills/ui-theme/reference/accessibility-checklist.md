@@ -1,0 +1,1 @@
+../../ui-generate/reference/accessibility-checklist.md

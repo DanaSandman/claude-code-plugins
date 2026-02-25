@@ -3,7 +3,9 @@
   "description": "Audit and fix technical SEO issues across all frontend frameworks including Next.js, React, Angular, and Static HTML.",
   "version": "1.0.0",
   "author": {
-    "name": "Claude Code Plugins",
-    "email": "support@anthropic.com"
-  }
+    "name": "Dana Sandman",
+    "email": "sandmandana1@gmail.com"
+  },
+  "keywords": ["seo", "technical", "seo", "issues", "audit", "fix", "technical", "seo", "issues", "audit", "fix"],
+  "license": "MIT"
 }

@@ -1,0 +1,12 @@
+{
+  "name": "shadcn-toolkit",
+  "description": "shadcn/ui and Tailwind CSS component generation and design utilities",
+  "version": "1.0.0",
+  "author": {
+    "name": "Dana Sandman",
+    "email": "sandmandana1@gmail.com"
+  },
+  
+  "keywords": ["shadcn", "tailwind", "ui", "components", "design", "styling"],
+  "license": "MIT"
+}
