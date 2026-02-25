@@ -1,4 +1,4 @@
-# universal-frontend-seo-plugin
+# seo-plugin
 
 A Claude Code plugin that audits and fixes technical SEO issues across all frontend frameworks.
 
@@ -38,6 +38,25 @@ Applies fixes to SEO issues found by seo-audit.
 **Input**: Issue ID, category name, or "all"
 
 **Output**: `fix-report.md` with fixed/skipped issues.
+
+## Commands
+
+| Command | Description |
+|---------|-------------|
+| `/seo-audit` | Full project SEO audit — generates reports |
+| `/seo-fix <target>` | Fix issues by ID, category, or all |
+| `/seo-check <file>` | Quick inline check on a single file |
+
+## Hooks
+
+The plugin includes a **PostToolUse hook** that runs automatically whenever Claude writes or edits a frontend file (`.html`, `.tsx`, `.jsx`, `.ts`, `.js`, `.vue`, `.svelte`). It checks for:
+
+- `<img>` without `alt` attribute
+- Multiple `<h1>` tags
+- `"use client"` on page/layout files with SEO content
+- Empty `<title>` tags
+
+Warnings appear inline right after the edit — no action needed from you.
 
 ## Usage
 
@@ -100,6 +119,16 @@ Applies all safe fixes across every category. Rendering issues are skipped (reco
 
 Targets only issues in the specified category.
 
+### Quick check a single file
+
+```
+/seo-check src/app/page.tsx
+/seo-check src/components/Header.tsx
+/seo-check index.html
+```
+
+Runs a fast inline SEO check on the specified file without generating report files. Shows issues directly in the conversation.
+
 ## Requirements
 
 - Node.js (uses built-in modules only, no npm install needed)
@@ -108,5 +137,5 @@ Targets only issues in the specified category.
 ## Local Testing
 
 ```bash
-claude --plugin-dir ./universal-frontend-seo-plugin
+claude --plugin-dir ./plugins/seo-plugin
 ```
