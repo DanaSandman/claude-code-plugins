@@ -41,12 +41,64 @@ Applies fixes to SEO issues found by seo-audit.
 
 ## Usage
 
+### Run a full SEO audit
+
 ```
-/universal-frontend-seo-plugin:seo-audit
-/universal-frontend-seo-plugin:seo-fix all
-/universal-frontend-seo-plugin:seo-fix SEO-001
-/universal-frontend-seo-plugin:seo-fix images
+/seo-audit
 ```
+
+Scans your entire project and generates two report files in the project root:
+- `seo-report.json` — structured data with all issues
+- `seo-report.md` — human-readable report with all 8 categories
+
+Example output:
+
+```
+Framework detected: Next.js 14.x (App Router)
+
+| Category        | Issues |
+|-----------------|--------|
+| Rendering       | 2      |
+| Title           | 1      |
+| Meta Description| 1      |
+| Headings        | 0      |
+| Semantic HTML   | 1      |
+| URL Structure   | 0      |
+| Images          | 3      |
+| Internal Links  | 1      |
+
+Total: 9 issues (1 critical, 3 high, 4 medium, 1 low)
+Reports saved to seo-report.json and seo-report.md
+```
+
+### Fix a specific issue by ID
+
+```
+/seo-fix SEO-012
+```
+
+Reads `seo-report.json`, finds issue `SEO-012`, and applies the fix if auto-fixable. If the issue is a rendering problem, it provides a recommendation instead of auto-applying.
+
+### Fix all auto-fixable issues
+
+```
+/seo-fix all
+```
+
+Applies all safe fixes across every category. Rendering issues are skipped (recommendation only). Generates `fix-report.md` with a summary of what was fixed, skipped, and what needs manual review.
+
+### Fix all issues in a specific category
+
+```
+/seo-fix images
+/seo-fix headings
+/seo-fix title
+/seo-fix meta-description
+/seo-fix semantic-html
+/seo-fix internal-links
+```
+
+Targets only issues in the specified category.
 
 ## Requirements
 
