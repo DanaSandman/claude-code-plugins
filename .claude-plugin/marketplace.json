@@ -9,13 +9,13 @@
   "plugins": [
     {
       "name": "seo-plugin",
-      "source": "plugins/seo-plugin",
+      "source": "./plugins/seo-plugin",
       "category": "SEO",
       "description": "Audit and fix technical SEO issues across all frontend frameworks."
     },
     {
       "name": "shadcn-toolkit",
-      "source": "plugins/shadcn-toolkit",
+      "source": "./plugins/shadcn-toolkit",
       "category": "UI",
       "description": "shadcn/ui and Tailwind CSS component generation, theming, and design utilities."
     }
