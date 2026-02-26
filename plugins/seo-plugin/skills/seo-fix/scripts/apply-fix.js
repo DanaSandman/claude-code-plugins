@@ -139,7 +139,8 @@ function applyCategoryFix(issue) {
     'headings': 'apply-heading-fix.js',
     'semantic-html': 'apply-semantic-fix.js',
     'images': 'apply-image-fix.js',
-    'internal-links': 'apply-link-fix.js'
+    'internal-links': 'apply-link-fix.js',
+    'gtm': 'apply-gtm-fix.js'
   };
 
   const script = scriptMap[issue.category];

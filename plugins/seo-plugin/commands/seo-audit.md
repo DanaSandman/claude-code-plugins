@@ -5,7 +5,7 @@ allowed-tools: [Read, Glob, Grep, Bash]
 
 # SEO Audit
 
-Run a complete SEO audit on the current project. Detect the framework automatically and scan all 8 categories:
+Run a complete SEO audit on the current project. Detect the framework automatically and scan all 9 categories:
 
 1. Rendering strategy
 2. Title tags
@@ -15,6 +15,7 @@ Run a complete SEO audit on the current project. Detect the framework automatica
 6. URL structure
 7. Image optimization
 8. Internal links
+9. Google Tag Manager
 
 ## Steps
 

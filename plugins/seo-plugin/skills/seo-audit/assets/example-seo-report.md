@@ -8,12 +8,12 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Issues | 8 |
+| Total Issues | 9 |
 | Critical | 1 |
-| High | 3 |
+| High | 4 |
 | Medium | 3 |
 | Low | 1 |
-| Auto-fixable | 4 |
+| Auto-fixable | 5 |
 
 ### Issues by Category
 
@@ -27,6 +27,7 @@
 | URL Structure | 1 |
 | Images | 1 |
 | Internal Links | 0 |
+| Google Tag Manager | 1 |
 
 ## Rendering
 
@@ -109,6 +110,16 @@
 ## Internal Links
 
 No issues found.
+
+## Google Tag Manager
+
+### SEO-009 [HIGH]
+
+- **File:** `app/layout.tsx` (line 1)
+- **Problem:** Google Tag Manager is not installed
+- **SEO Impact:** Without GTM, tracking and analytics cannot collect data. This impacts marketing measurement, conversion tracking, and data-driven SEO decisions.
+- **Recommended Fix:** Install GTM by adding the official script snippet to the root layout or _document file.
+- **Auto-fix Available:** Yes
 
 ---
 

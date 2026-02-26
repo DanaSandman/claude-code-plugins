@@ -7,7 +7,7 @@
 
 | Status | Count |
 |--------|-------|
-| Fixed | 3 |
+| Fixed | 4 |
 | Skipped | 2 |
 | Manual Review | 2 |
 
@@ -27,6 +27,11 @@
 - **File:** `app/layout.tsx`
 - **Problem:** Missing <main> landmark element
 - **Action:** Added <main> wrapper around primary content area.
+
+### SEO-009
+- **File:** `app/layout.tsx`
+- **Problem:** Google Tag Manager is not installed
+- **Action:** Installed GTM in app/layout.tsx using Next.js Script component with strategy="afterInteractive". Please verify your GTM container ID.
 
 ## Skipped Issues
 

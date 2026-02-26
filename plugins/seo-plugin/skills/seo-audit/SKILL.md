@@ -46,6 +46,7 @@ Also read these universal guides:
 - [reference/image-seo-guide.md](reference/image-seo-guide.md)
 - [reference/internal-linking-guide.md](reference/internal-linking-guide.md)
 - [reference/url-structure-guide.md](reference/url-structure-guide.md)
+- [reference/gtm-guide.md](reference/gtm-guide.md)
 
 ## Step 3: Run All Scan Scripts
 
@@ -60,6 +61,7 @@ node "SKILL_DIR/scripts/scan-semantic.js" "$(pwd)" "<framework>"
 node "SKILL_DIR/scripts/scan-url.js" "$(pwd)" "<framework>"
 node "SKILL_DIR/scripts/scan-images.js" "$(pwd)" "<framework>"
 node "SKILL_DIR/scripts/scan-links.js" "$(pwd)" "<framework>"
+node "SKILL_DIR/scripts/scan-gtm.js" "$(pwd)" "<framework>"
 ```
 
 Collect all JSON results from each scanner.
@@ -88,7 +90,7 @@ Use the example report at [assets/example-seo-report.md](assets/example-seo-repo
 
 ## Categories Covered
 
-All 8 categories MUST appear in the report, even if zero issues are found:
+All 9 categories MUST appear in the report, even if zero issues are found:
 
 | Category | Script | What It Checks |
 |----------|--------|----------------|
@@ -100,6 +102,7 @@ All 8 categories MUST appear in the report, even if zero issues are found:
 | URL Structure | scan-url.js | Route naming, SEO-friendly slugs |
 | Images | scan-images.js | Alt attributes, framework image component usage |
 | Internal Links | scan-links.js | Link component usage, broken links |
+| Google Tag Manager | scan-gtm.js | GTM installation, placement, env var usage |
 
 ## Issue Schema
 
@@ -110,7 +113,7 @@ Every issue object must follow this schema:
   "id": "SEO-001",
   "severity": "critical|high|medium|low",
   "framework": "nextjs|react|angular|html",
-  "category": "rendering|title|meta-description|headings|semantic-html|url-structure|images|internal-links",
+  "category": "rendering|title|meta-description|headings|semantic-html|url-structure|images|internal-links|gtm",
   "file": "relative/path/to/file.tsx",
   "line": 15,
   "problem": "Clear description of the issue",

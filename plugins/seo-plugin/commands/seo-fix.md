@@ -14,7 +14,7 @@ $ARGUMENTS
 
 Accepted values:
 - **Issue ID**: `SEO-001`, `SEO-012` — fix a single issue
-- **Category**: `title`, `meta-description`, `headings`, `semantic-html`, `images`, `internal-links` — fix all issues in that category
+- **Category**: `title`, `meta-description`, `headings`, `semantic-html`, `images`, `internal-links`, `gtm` — fix all issues in that category
 - **`all`** — fix every auto-fixable issue
 
 If no argument is provided, prompt the user to choose.

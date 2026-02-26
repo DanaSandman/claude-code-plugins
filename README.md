@@ -6,7 +6,7 @@ A curated collection of Claude Code plugins. Each plugin adds specialized skills
 
 ### seo-plugin
 
-Audits and fixes technical SEO issues across all frontend frameworks — Next.js, React, Angular, and Static HTML. Detects the framework automatically and scans 8 SEO categories: rendering strategy, titles, meta descriptions, headings, semantic HTML, URL structure, images, and internal links.
+Audits and fixes technical SEO issues across all frontend frameworks — Next.js, React, Angular, and Static HTML. Detects the framework automatically and scans 9 SEO categories: rendering strategy, titles, meta descriptions, headings, semantic HTML, URL structure, images, internal links, and Google Tag Manager integration.
 
 **Commands:**
 
@@ -18,7 +18,7 @@ Audits and fixes technical SEO issues across all frontend frameworks — Next.js
 /seo-check src/app/page.tsx   # Quick inline check on a single file
 ```
 
-**Hooks:** Automatically warns about SEO mistakes (missing alt, multiple H1, empty titles) whenever Claude edits a frontend file.
+**Hooks:** Automatically warns about SEO mistakes (missing alt, multiple H1, empty titles, duplicate GTM) whenever Claude edits a frontend file.
 
 ---
 

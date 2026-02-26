@@ -31,6 +31,7 @@ node "SKILL_DIR/../skills/seo-audit/scripts/detect-framework.js" "$(pwd)"
    - Native `<a>` instead of framework Link component
    - Missing semantic HTML landmarks
    - `"use client"` on pages with SEO content (Next.js)
+   - Google Tag Manager installation and placement issues
 
 4. Present findings inline — no report files generated. Just show the issues directly to the user in a concise list.
 

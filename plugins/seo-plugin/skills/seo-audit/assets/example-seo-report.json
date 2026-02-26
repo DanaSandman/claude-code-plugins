@@ -3,10 +3,10 @@
   "projectRoot": "/Users/example/my-nextjs-app",
   "framework": "nextjs",
   "summary": {
-    "totalIssues": 8,
+    "totalIssues": 9,
     "bySeverity": {
       "critical": 1,
-      "high": 3,
+      "high": 4,
       "medium": 3,
       "low": 1
     },
@@ -18,9 +18,10 @@
       "semantic-html": 1,
       "url-structure": 1,
       "images": 1,
-      "internal-links": 0
+      "internal-links": 0,
+      "gtm": 1
     },
-    "autoFixable": 4
+    "autoFixable": 5
   },
   "issues": [
     {
@@ -118,6 +119,18 @@
       "seoImpact": "Missing dimensions cause Cumulative Layout Shift (CLS), a Core Web Vital.",
       "recommendedFix": "Add width and height attributes to prevent layout shift.",
       "autoFixPossible": false
+    },
+    {
+      "id": "SEO-009",
+      "severity": "high",
+      "framework": "nextjs",
+      "category": "gtm",
+      "file": "app/layout.tsx",
+      "line": 1,
+      "problem": "Google Tag Manager is not installed",
+      "seoImpact": "Without GTM, tracking and analytics cannot collect data. This impacts marketing measurement, conversion tracking, and data-driven SEO decisions.",
+      "recommendedFix": "Install GTM by adding the official script snippet to the root layout or _document file.",
+      "autoFixPossible": true
     }
   ]
 }

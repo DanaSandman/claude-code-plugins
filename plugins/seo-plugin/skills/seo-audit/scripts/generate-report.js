@@ -22,7 +22,8 @@ const CATEGORIES = [
   'semantic-html',
   'url-structure',
   'images',
-  'internal-links'
+  'internal-links',
+  'gtm'
 ];
 
 const CATEGORY_LABELS = {
@@ -33,7 +34,8 @@ const CATEGORY_LABELS = {
   'semantic-html': 'Semantic HTML',
   'url-structure': 'URL Structure',
   'images': 'Images',
-  'internal-links': 'Internal Links'
+  'internal-links': 'Internal Links',
+  'gtm': 'Google Tag Manager'
 };
 
 const SEVERITY_ORDER = { critical: 0, high: 1, medium: 2, low: 3 };

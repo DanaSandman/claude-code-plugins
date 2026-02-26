@@ -79,6 +79,28 @@ Rendering fixes are **never auto-applied**. Always present recommendations:
 | `<a>` instead of React Router Link | Convert to `<Link to>` + add import |
 | Broken internal links | Cannot auto-fix (needs content decision) |
 
+### Google Tag Manager Fixes (Partially Auto-fixable)
+
+| Scenario | Fix | Auto? |
+|----------|-----|-------|
+| GTM not installed | Add official script + noscript snippets | Yes |
+| Missing noscript fallback | Add noscript iframe after `<body>` | Yes |
+| Missing script tag | Add script tag in `<head>` | Yes |
+| Script not in `<head>` | Needs manual relocation | No |
+| Noscript not after `<body>` | Needs manual relocation | No |
+| Hardcoded container ID | Needs manual env var migration | No |
+| Mismatched GTM IDs | Needs manual verification | No |
+
+**Framework-specific installation:**
+
+| Framework | Script Method | Target File |
+|-----------|--------------|-------------|
+| Next.js (App Router) | `next/script` with `strategy="afterInteractive"` | `app/layout.tsx` |
+| Next.js (Pages Router) | Inline `<script>` in `<Head>` | `pages/_document.tsx` |
+| React / Vite / Angular / HTML | Direct HTML snippet | `index.html` |
+
+**Note**: GTM fixes use environment variables when available (NEXT_PUBLIC_GTM_ID, VITE_GTM_ID, REACT_APP_GTM_ID). A `.env.example` file is created or updated with a placeholder entry.
+
 ## Post-Fix Verification
 
 After applying fixes:

@@ -28,6 +28,7 @@ Read-only scan that generates a complete SEO audit report.
 - URL structure
 - Image optimization
 - Internal links
+- Google Tag Manager (installation, placement, env var usage)
 
 ### seo-fix
 
@@ -55,6 +56,7 @@ The plugin includes a **PostToolUse hook** that runs automatically whenever Clau
 - Multiple `<h1>` tags
 - `"use client"` on page/layout files with SEO content
 - Empty `<title>` tags
+- Duplicate GTM script installations
 
 Warnings appear inline right after the edit — no action needed from you.
 
@@ -68,25 +70,26 @@ Warnings appear inline right after the edit — no action needed from you.
 
 Scans your entire project and generates two report files in the project root:
 - `seo-report.json` — structured data with all issues
-- `seo-report.md` — human-readable report with all 8 categories
+- `seo-report.md` — human-readable report with all 9 categories
 
 Example output:
 
 ```
 Framework detected: Next.js 14.x (App Router)
 
-| Category        | Issues |
-|-----------------|--------|
-| Rendering       | 2      |
-| Title           | 1      |
-| Meta Description| 1      |
-| Headings        | 0      |
-| Semantic HTML   | 1      |
-| URL Structure   | 0      |
-| Images          | 3      |
-| Internal Links  | 1      |
+| Category             | Issues |
+|----------------------|--------|
+| Rendering            | 2      |
+| Title                | 1      |
+| Meta Description     | 1      |
+| Headings             | 0      |
+| Semantic HTML        | 1      |
+| URL Structure        | 0      |
+| Images               | 3      |
+| Internal Links       | 1      |
+| Google Tag Manager   | 1      |
 
-Total: 9 issues (1 critical, 3 high, 4 medium, 1 low)
+Total: 10 issues (1 critical, 4 high, 4 medium, 1 low)
 Reports saved to seo-report.json and seo-report.md
 ```
 
@@ -115,6 +118,7 @@ Applies all safe fixes across every category. Rendering issues are skipped (reco
 /seo-fix meta-description
 /seo-fix semantic-html
 /seo-fix internal-links
+/seo-fix gtm
 ```
 
 Targets only issues in the specified category.

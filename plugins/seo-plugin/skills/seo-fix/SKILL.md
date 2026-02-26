@@ -30,7 +30,7 @@ $ARGUMENTS
 
 Supported inputs:
 - **Issue ID**: `SEO-001` — fix a specific issue
-- **Category**: `title`, `meta-description`, `headings`, `semantic-html`, `images`, `internal-links`, `rendering` — fix all issues in a category
+- **Category**: `title`, `meta-description`, `headings`, `semantic-html`, `images`, `internal-links`, `rendering`, `gtm` — fix all issues in a category
 - **"all"** — fix all auto-fixable issues
 - **No input** — prompt the user to choose
 
@@ -75,6 +75,7 @@ Category-specific fix scripts are available at:
 - `scripts/apply-image-fix.js` — Image alt and component fixes
 - `scripts/apply-link-fix.js` — Internal link fixes
 - `scripts/apply-render-fix.js` — Rendering recommendations (NEVER auto-applies)
+- `scripts/apply-gtm-fix.js` — Google Tag Manager installation and fixes
 
 ## Critical Safety Rules
 

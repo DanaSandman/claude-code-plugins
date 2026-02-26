@@ -62,6 +62,12 @@ if (/<title[^>]*>\s*<\/title>/i.test(content)) {
   warnings.push("⚠ SEO: Empty <title> tag found");
 }
 
+// Check for duplicate GTM installation
+const gtmScriptCount = (content.match(/googletagmanager\.com\/gtm\.js/g) || []).length;
+if (gtmScriptCount > 1) {
+  warnings.push(`⚠ SEO: Duplicate GTM script tags found (${gtmScriptCount}). Only one GTM installation per page`);
+}
+
 // Output warnings if any
 if (warnings.length > 0) {
   console.log(warnings.join("\n"));
