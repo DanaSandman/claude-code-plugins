@@ -2,7 +2,7 @@
   {
     "event": "PostToolUse",
     "tools": ["Write", "Edit"],
-    "command": "bash hooks/seo-lint.sh \"$FILE_PATH\"",
+    "command": "node hooks/seo-lint.js \"$FILE_PATH\"",
     "description": "Auto-check SEO issues when frontend files are created or edited"
   }
 ]

@@ -2,7 +2,7 @@
   {
     "event": "PostToolUse",
     "tools": ["Write", "Edit"],
-    "command": "bash hooks/ui-lint.sh \"$FILE_PATH\"",
+    "command": "node hooks/ui-lint.js \"$FILE_PATH\"",
     "description": "Auto-check UI component quality when React/JSX files are created or edited"
   }
 ]
