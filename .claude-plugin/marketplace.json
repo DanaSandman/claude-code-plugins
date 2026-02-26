@@ -1,5 +1,5 @@
 {
-  "name": "claude-code-plugins",
+  "name": "dana-plugins",
   "description": "A collection of Claude Code plugins for frontend development workflows.",
   "version": "1.0.0",
   "owner": {
