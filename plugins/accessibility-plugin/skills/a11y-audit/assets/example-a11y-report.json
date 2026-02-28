@@ -1,0 +1,183 @@
+{
+  "generatedAt": "2026-02-27T12:00:00.000Z",
+  "projectRoot": "/Users/example/my-nextjs-app",
+  "framework": "nextjs",
+  "summary": {
+    "totalIssues": 12,
+    "bySeverity": {
+      "critical": 2,
+      "high": 5,
+      "medium": 3,
+      "low": 2
+    },
+    "byCategory": {
+      "semantics": 2,
+      "names": 2,
+      "images": 2,
+      "forms": 2,
+      "aria": 1,
+      "keyboard": 1,
+      "patterns": 1,
+      "dynamic": 1
+    },
+    "autoFixable": 8
+  },
+  "issues": [
+    {
+      "id": "A11Y-001",
+      "severity": "critical",
+      "category": "semantics",
+      "file": "app/components/Card.tsx",
+      "line": 15,
+      "problem": "<div> with onClick handler used as interactive control without role or keyboard support",
+      "impact": "Keyboard and screen reader users cannot activate this control.",
+      "recommendedFix": "Replace <div onClick> with <button type=\"button\"> or add role=\"button\", tabindex=\"0\", and onKeyDown handler.",
+      "autoFixPossible": true,
+      "wcagCriteria": "4.1.2",
+      "wcagLevel": "A"
+    },
+    {
+      "id": "A11Y-002",
+      "severity": "critical",
+      "category": "names",
+      "file": "app/components/Header.tsx",
+      "line": 22,
+      "problem": "Icon-only button has no accessible name",
+      "impact": "Screen readers announce this as 'button' with no description.",
+      "recommendedFix": "Add aria-label describing the button's purpose (e.g. aria-label=\"Close menu\").",
+      "autoFixPossible": true,
+      "wcagCriteria": "4.1.2",
+      "wcagLevel": "A"
+    },
+    {
+      "id": "A11Y-003",
+      "severity": "high",
+      "category": "images",
+      "file": "app/components/Hero.tsx",
+      "line": 8,
+      "problem": "<img> tag missing alt attribute",
+      "impact": "Screen readers cannot describe the image. Users see no text when image fails to load.",
+      "recommendedFix": "Add alt attribute with descriptive text, or alt=\"\" if decorative.",
+      "autoFixPossible": true,
+      "wcagCriteria": "1.1.1",
+      "wcagLevel": "A"
+    },
+    {
+      "id": "A11Y-004",
+      "severity": "high",
+      "category": "images",
+      "file": "app/components/ProductGrid.tsx",
+      "line": 31,
+      "problem": "Next.js Image component missing alt prop",
+      "impact": "Screen readers cannot describe the image.",
+      "recommendedFix": "Add alt prop with descriptive text.",
+      "autoFixPossible": true,
+      "wcagCriteria": "1.1.1",
+      "wcagLevel": "A"
+    },
+    {
+      "id": "A11Y-005",
+      "severity": "high",
+      "category": "forms",
+      "file": "app/components/SearchBar.tsx",
+      "line": 12,
+      "problem": "<input> uses placeholder as its only label",
+      "impact": "Label disappears when user types. Screen readers may not announce it.",
+      "recommendedFix": "Add a visible <label> or aria-label attribute.",
+      "autoFixPossible": true,
+      "wcagCriteria": "3.3.2",
+      "wcagLevel": "A"
+    },
+    {
+      "id": "A11Y-006",
+      "severity": "high",
+      "category": "forms",
+      "file": "app/components/ContactForm.tsx",
+      "line": 28,
+      "problem": "<input> has no associated label",
+      "impact": "Screen readers cannot identify this input.",
+      "recommendedFix": "Add a <label> with matching for/id, or add aria-label.",
+      "autoFixPossible": true,
+      "wcagCriteria": "1.3.1",
+      "wcagLevel": "A"
+    },
+    {
+      "id": "A11Y-007",
+      "severity": "high",
+      "category": "names",
+      "file": "app/components/Footer.tsx",
+      "line": 45,
+      "problem": "Link (<a>) has no accessible name",
+      "impact": "Screen readers announce this as 'link' with no description.",
+      "recommendedFix": "Add link text or aria-label.",
+      "autoFixPossible": true,
+      "wcagCriteria": "4.1.2",
+      "wcagLevel": "A"
+    },
+    {
+      "id": "A11Y-008",
+      "severity": "medium",
+      "category": "aria",
+      "file": "app/components/Nav.tsx",
+      "line": 5,
+      "problem": "Redundant role: <nav> already has implicit role 'navigation'",
+      "impact": "Clutters the accessibility tree. No functional harm but reduces code clarity.",
+      "recommendedFix": "Remove role=\"navigation\" from <nav>.",
+      "autoFixPossible": true,
+      "wcagCriteria": "4.1.2",
+      "wcagLevel": "A"
+    },
+    {
+      "id": "A11Y-009",
+      "severity": "medium",
+      "category": "keyboard",
+      "file": "app/components/Tabs.tsx",
+      "line": 18,
+      "problem": "Element has tabindex=\"5\" — positive tabindex disrupts natural focus order",
+      "impact": "Focus order becomes unpredictable for keyboard users.",
+      "recommendedFix": "Change to tabindex=\"0\" and rely on DOM order.",
+      "autoFixPossible": true,
+      "wcagCriteria": "2.4.3",
+      "wcagLevel": "A"
+    },
+    {
+      "id": "A11Y-010",
+      "severity": "medium",
+      "category": "semantics",
+      "file": "app/components/Sidebar.tsx",
+      "line": 10,
+      "problem": "<div> with onClick handler used as interactive control without role or keyboard support",
+      "impact": "Keyboard and screen reader users cannot activate this control.",
+      "recommendedFix": "Replace <div onClick> with <button type=\"button\">.",
+      "autoFixPossible": true,
+      "wcagCriteria": "4.1.2",
+      "wcagLevel": "A"
+    },
+    {
+      "id": "A11Y-011",
+      "severity": "low",
+      "category": "patterns",
+      "file": "app/components/Modal.tsx",
+      "line": 6,
+      "problem": "Modal/dialog container missing role=\"dialog\"",
+      "impact": "Screen readers do not announce the modal context.",
+      "recommendedFix": "Add role=\"dialog\" and aria-modal=\"true\" to the modal container.",
+      "autoFixPossible": true,
+      "wcagCriteria": "4.1.2",
+      "wcagLevel": "A"
+    },
+    {
+      "id": "A11Y-012",
+      "severity": "low",
+      "category": "dynamic",
+      "file": "app/components/Toast.tsx",
+      "line": 14,
+      "problem": "Toast/notification container missing aria-live region",
+      "impact": "Screen readers do not announce dynamic notifications.",
+      "recommendedFix": "Add aria-live=\"polite\" (or \"assertive\" for urgent alerts) to the toast container.",
+      "autoFixPossible": false,
+      "wcagCriteria": "4.1.3",
+      "wcagLevel": "A"
+    }
+  ]
+}

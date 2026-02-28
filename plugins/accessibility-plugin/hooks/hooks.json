@@ -1,0 +1,8 @@
+[
+  {
+    "event": "PostToolUse",
+    "tools": ["Write", "Edit"],
+    "command": "node hooks/a11y-lint.js \"$FILE_PATH\"",
+    "description": "Auto-check accessibility issues when frontend files are created or edited"
+  }
+]

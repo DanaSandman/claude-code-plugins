@@ -1,0 +1,11 @@
+{
+  "name": "accessibility-plugin",
+  "description": "Audit and fix accessibility issues (ARIA, forms, keyboard, semantics, screen reader support) across frontend frameworks including Next.js, React, Angular, and Static HTML.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Dana Sandman",
+    "email": "sandmandana1@gmail.com"
+  },
+  "keywords": ["accessibility", "a11y", "wcag", "aria", "audit", "fix", "keyboard", "screen-reader"],
+  "license": "MIT"
+}
